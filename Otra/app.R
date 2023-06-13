@@ -22,11 +22,18 @@ bd <-  EH2021_Vivienda %>% select(depto,
                                   )
 dict <- labelled::generate_dictionary(EH2021_Vivienda)
 deptos <- as.data.frame(names(val_labels(bd[["depto"]])))
+bdf <- bd %>% select(-depto, -area)
+m <- list(
+  l = 10,
+  r = 10,
+  b = 0,
+  t = 10,
+  pad = 2
+)
 
 ui <- fluidPage(
   
-  theme = bslib::bs_theme(bootswatch = "superhero", base_font = font_google("Inter"),
-                          navbar_bg = "#25443B"),
+  theme = bslib::bs_theme(bootswatch = "superhero", navbar_bg = "#25443B"),
   titlePanel("Caracteristicas de viviendas en Bolivia, EH 2021"),
   
     sidebarLayout(
@@ -77,7 +84,8 @@ server <- function(input, output, session) {
       domain=list(column=0)) %>% 
         layout(paper_bgcolor='rgba(0,0,0,0)',
                plot_bgcolor='rgba(0,0,0,0)',
-               title = "")
+               title = "",
+               margin = m)
     
   })
 
