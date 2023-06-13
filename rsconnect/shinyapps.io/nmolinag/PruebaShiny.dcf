@@ -1,0 +1,14 @@
+name: PruebaShiny
+title: PruebaShiny
+username:
+account: nmolinag
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 9284335
+bundleId: 7329465
+url: https://nmolinag.shinyapps.io/PruebaShiny/
+when: 1686432575.58867
+lastSyncTime: 1686432575.58868
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: datosevaluacion.txt|PlanRiesgo/app.R|README.md
